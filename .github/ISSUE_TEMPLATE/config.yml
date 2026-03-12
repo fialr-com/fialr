@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://fialr.com
+    about: Read the full documentation before filing an issue.
+  - name: Security vulnerability
+    url: https://fialr.com/legal/security/
+    about: Do not open a public issue for security vulnerabilities. Email security@fialr.com.
+  - name: Billing and licensing
+    url: mailto:licensing@fialr.com
+    about: For purchase, activation, or license issues, email licensing@fialr.com.

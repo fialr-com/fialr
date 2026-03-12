@@ -1,0 +1,47 @@
+name: Bug Report
+description: Report a bug in fialr
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: fialr version
+      description: "Output of `fialr --version`"
+      placeholder: "fialr 1.0.0 (build a1b2c3d4)"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Linux (x64)
+        - Windows (x64)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened? What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Exact commands or sequence of actions to reproduce the issue.
+      placeholder: |
+        1. Run `fialr scan ~/Documents`
+        2. Run `fialr classify`
+        3. Observe error...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: "Paste any error messages or `--verbose` output. Do not include file paths or filenames from your system."
+      render: shell
