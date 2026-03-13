@@ -13,7 +13,7 @@ Every operation is logged to an append-only ledger. Every file is hash-verified 
 ## Key properties
 
 - **Content hash as identity.** BLAKE3 hash is the stable identifier. Filenames and paths are mutable metadata.
-- **Local only.** No file content, filename, or metadata leaves the machine. All enrichment runs locally via Ollama.
+- **Local by default.** All enrichment runs locally via Ollama. Cloud providers (Claude API, BYOK) are opt-in for Tier 2–3 files only. Tier 1 files are local-only unless a triple-gate override is active.
 - **Safety by default.** Every module has dry-run mode on by default. Execution requires explicit confirmation.
 - **Infrastructure, not organizer.** A structured corpus is a reliable input to future applications.
 
@@ -26,7 +26,6 @@ Purchase a license at [fialr.com/licensing](https://fialr.com/licensing/) to rec
 | macOS (Apple Silicon) | `fialr-1.0.0-macos-arm64` |
 | macOS (Intel) | `fialr-1.0.0-macos-x64` |
 | Linux (x64) | `fialr-1.0.0-linux-x64` |
-| Windows (x64) | `fialr-1.0.0-windows-x64.exe` |
 
 ## Activate
 
