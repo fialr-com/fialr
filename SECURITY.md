@@ -15,7 +15,7 @@ Include:
 - Affected versions
 - Any potential impact assessment
 
-We will acknowledge receipt within 48 hours and provide an initial assessment within 7 days.
+We aim to acknowledge receipt promptly and will provide an initial assessment as soon as practical.
 
 ## Scope
 
