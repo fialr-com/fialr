@@ -1,21 +1,21 @@
 # fialr
 
-Archival infrastructure for files that matter.
+AI-native archival infrastructure for files that matter.
 
 **[Documentation](https://fialr.com)** · **[Purchase](https://fialr.com/licensing/)** · **[Issues](https://github.com/fialr-com/fialr/issues)**
 
 ---
 
-fialr assigns cryptographic identity to files, classifies sensitivity, enforces naming conventions, detects duplicates, and structures your corpus for both human discovery and machine-native applications.
+fialr treats files as long-term digital assets with local AI at the foundation. It assigns cryptographic identity, classifies sensitivity, generates vector embeddings for semantic discovery, and structures your corpus into an adaptive, machine-native archive.
 
-Every operation is logged to an append-only ledger. Every file is hash-verified before and after modification. Nothing moves without a dry-run review first.
+Every file is enriched by local AI that learns from your corpus. Every operation is logged to an append-only ledger. Every file is hash-verified before and after modification. Nothing moves without a dry-run review first.
 
 ## Key properties
 
 - **Content hash as identity.** BLAKE3 hash is the stable identifier. Filenames and paths are mutable metadata.
-- **Local by default.** All enrichment runs locally via Ollama. Cloud providers (Claude API, BYOK) are opt-in for Tier 2–3 files only. Tier 1 files are local-only unless a triple-gate override is active.
+- **Local AI, adaptive corpus.** Enrichment and vector embeddings run locally via Ollama. Each file indexed improves semantic search, deduplication, and metadata quality across the entire corpus. Cloud providers available as opt-in for non-restricted files.
 - **Safety by default.** Every module has dry-run mode on by default. Execution requires explicit confirmation.
-- **Infrastructure, not organizer.** A structured corpus is a reliable input to future applications.
+- **Infrastructure, not organizer.** A structured, vector-indexed corpus is a reliable input to future applications: AI agents, semantic search, automation pipelines, and tools that do not yet exist.
 
 ## Install
 
