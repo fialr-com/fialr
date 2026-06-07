@@ -20,9 +20,9 @@ Initial release.
 - Local AI enrichment via Ollama (OCR, text extraction, metadata inference)
 - Append-only audit ledger (SQLite)
 - Job checkpoint and resume
-- Cross-platform support: macOS, Linux, Windows
+- Cross-platform support: macOS, Linux
 - Extended attribute metadata (macOS, Linux) with SQLite fallback
-- CLI with 12 commands across 3 groups
-- Sidecar export (JSON, YAML)
+- CLI organized into six command groups (workflow, discover, enrich, tools, status, license) plus an interactive TUI
+- Sidecar export (JSON, Markdown, CSV)
 - Ed25519 binary signatures via minisign
-- BLAKE3 self-verification (`fialr verify --self`)
+- BLAKE3 checksums for release artifacts

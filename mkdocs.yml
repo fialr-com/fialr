@@ -1,0 +1,66 @@
+site_name: fialr
+site_description: AI-native archival infrastructure for files that matter.
+site_url: https://fialr-com.github.io/fialr
+site_author: fialr
+
+repo_url: https://github.com/fialr-com/fialr
+repo_name: fialr-com/fialr
+edit_uri: ""
+
+copyright: fialr — proprietary software. Documentation is published for developers, contributors, and security researchers.
+
+theme:
+  name: material
+  language: en
+  font: false
+  palette:
+    # Dark (slate) is the default.
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  features:
+    - content.code.copy
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.sections
+    - toc.follow
+    - search.suggest
+    - search.highlight
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - search
+
+nav:
+  - Overview: index.md
+  - Architecture: architecture.md
+  - CLI Reference: cli.md
+  - Security: security.md
+  - Verifying Releases: verifying-releases.md
+  - Contributing: contributing.md

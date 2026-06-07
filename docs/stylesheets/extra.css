@@ -1,0 +1,203 @@
+/*
+ * fialr documentation theme overrides.
+ * Mirrors the fialr.com brand palette. Square corners only. No emoji, no gradients,
+ * no rounded corners, no drop shadows.
+ *
+ * Palette tokens (from brand identity):
+ *   Ink       #0A0C0F  primary dark / text on light
+ *   Ink 2     #181C21  dark surfaces
+ *   Iron      #252B33  dark UI elements
+ *   Graphite  #3A424E  body text (light)
+ *   Ash       #68737F  secondary text, labels
+ *   Dust      #A4AEBA  tertiary text
+ *   Fog       #D0D6DE  body text on dark / borders
+ *   Paper     #ECEEF1  light surface
+ *   White     #F6F7F9  headings on dark / light background
+ *   Bronze    #A89060  signal accent (links, accents)
+ *   Bronze+   #D4BB88  brighter bronze for hover
+ */
+
+:root {
+  --fialr-ink: #0A0C0F;
+  --fialr-ink2: #181C21;
+  --fialr-iron: #252B33;
+  --fialr-graphite: #3A424E;
+  --fialr-ash: #68737F;
+  --fialr-dust: #A4AEBA;
+  --fialr-fog: #D0D6DE;
+  --fialr-paper: #ECEEF1;
+  --fialr-white: #F6F7F9;
+  --fialr-bronze: #A89060;
+  --fialr-bronze-bright: #D4BB88;
+}
+
+/* Accent + primary for both schemes. */
+:root,
+[data-md-color-scheme="default"],
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--fialr-bronze);
+  --md-primary-fg-color--light: var(--fialr-bronze-bright);
+  --md-primary-fg-color--dark: #8a7650;
+  --md-accent-fg-color: var(--fialr-bronze-bright);
+  --md-accent-fg-color--transparent: rgba(168, 144, 96, 0.1);
+}
+
+/* ---- Dark scheme (slate, default) ---- */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--fialr-ink);
+  --md-default-fg-color: var(--fialr-fog);
+  --md-default-fg-color--light: var(--fialr-dust);
+  --md-default-fg-color--lighter: var(--fialr-ash);
+  --md-default-fg-color--lightest: var(--fialr-iron);
+
+  --md-primary-bg-color: var(--fialr-white);
+  --md-primary-bg-color--light: var(--fialr-fog);
+
+  --md-typeset-color: var(--fialr-fog);
+  --md-typeset-a-color: var(--fialr-bronze);
+
+  --md-code-bg-color: var(--fialr-ink2);
+  --md-code-fg-color: var(--fialr-fog);
+
+  --md-footer-bg-color: var(--fialr-ink2);
+  --md-footer-bg-color--dark: var(--fialr-ink);
+}
+
+/* Header and footer surfaces in dark mode use Ink 2, not bronze fills.
+   Bronze is a signal accent, never a fill. */
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: var(--fialr-ink2);
+  color: var(--fialr-white);
+}
+
+/* Headings: White on dark. */
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4 {
+  color: var(--fialr-white);
+}
+
+/* ---- Light scheme ---- */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: var(--fialr-white);
+  --md-default-fg-color: var(--fialr-graphite);
+  --md-typeset-color: var(--fialr-graphite);
+  --md-typeset-a-color: #8a7650;
+  --md-code-bg-color: var(--fialr-paper);
+}
+
+[data-md-color-scheme="default"] .md-header,
+[data-md-color-scheme="default"] .md-tabs {
+  background-color: var(--fialr-ink2);
+  color: var(--fialr-white);
+}
+
+[data-md-color-scheme="default"] .md-typeset h1,
+[data-md-color-scheme="default"] .md-typeset h2,
+[data-md-color-scheme="default"] .md-typeset h3,
+[data-md-color-scheme="default"] .md-typeset h4 {
+  color: var(--fialr-ink);
+}
+
+/* ---- Links ---- */
+.md-typeset a {
+  color: var(--md-typeset-a-color);
+  text-decoration: none;
+}
+
+.md-typeset a:hover,
+.md-typeset a:focus {
+  color: var(--fialr-bronze-bright);
+  text-decoration: underline;
+}
+
+/* ---- Square corners everywhere. No rounded corners. ---- */
+* {
+  border-radius: 0 !important;
+}
+
+/* ---- Code blocks: dark surfaces, square, no shadow ---- */
+.md-typeset pre > code,
+.md-typeset code,
+.md-typeset .highlight {
+  border-radius: 0 !important;
+}
+
+.md-typeset pre {
+  border-left: 2px solid var(--fialr-bronze);
+}
+
+/* ---- Inline code accent ---- */
+.md-typeset code {
+  border: 1px solid var(--fialr-iron);
+}
+
+[data-md-color-scheme="default"] .md-typeset code {
+  border-color: var(--fialr-fog);
+}
+
+/* ---- Tables: rule lines, square, no shadow ---- */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--fialr-iron);
+  box-shadow: none;
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) {
+  border-color: var(--fialr-fog);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--fialr-ink2);
+  color: var(--fialr-white);
+  font-weight: 500;
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) th {
+  background-color: var(--fialr-paper);
+  color: var(--fialr-ink);
+}
+
+/* ---- Admonitions: square, 2px accent rule, no shadow ---- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 0 !important;
+  border-left: 2px solid var(--fialr-bronze);
+  box-shadow: none;
+}
+
+/* ---- Buttons / search: no rounding, no shadow ---- */
+.md-search__form,
+.md-search__input {
+  border-radius: 0 !important;
+  box-shadow: none;
+}
+
+/* ---- Remove drop shadows globally (brand: no drop shadows) ---- */
+.md-header,
+.md-tabs,
+.md-nav__link,
+.md-footer {
+  box-shadow: none;
+}
+
+/* ---- Bronze accent on the active nav item ---- */
+.md-nav__link--active,
+.md-nav__item .md-nav__link--active {
+  color: var(--fialr-bronze) !important;
+}
+
+/* ---- Horizontal rules as 2px rule lines ---- */
+.md-typeset hr {
+  border-bottom: 2px solid var(--fialr-iron);
+}
+
+[data-md-color-scheme="default"] .md-typeset hr {
+  border-bottom-color: var(--fialr-fog);
+}
+
+/* ---- Mermaid diagrams: square container, no rounding inherited ---- */
+.md-typeset .mermaid {
+  text-align: center;
+}

@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0",
+  "commands": [
+    "activate",
+    "classify",
+    "cleanup",
+    "config",
+    "configure",
+    "deactivate",
+    "dedup",
+    "embed",
+    "enrich",
+    "execute",
+    "export",
+    "hash",
+    "license",
+    "organize",
+    "plan",
+    "process",
+    "rename",
+    "scan",
+    "search",
+    "similar",
+    "status",
+    "tui",
+    "undo",
+    "validate",
+    "vault"
+  ],
+  "command_groups": [
+    {
+      "label": "WORKFLOW COMMANDS",
+      "commands": [
+        "process",
+        "organize",
+        "cleanup"
+      ]
+    },
+    {
+      "label": "DISCOVER",
+      "commands": [
+        "scan",
+        "search"
+      ]
+    },
+    {
+      "label": "ENRICH",
+      "commands": [
+        "enrich",
+        "rename"
+      ]
+    },
+    {
+      "label": "TOOLS",
+      "commands": [
+        "hash",
+        "export",
+        "vault",
+        "validate",
+        "undo",
+        "dedup"
+      ]
+    },
+    {
+      "label": "STATUS",
+      "commands": [
+        "tui",
+        "status",
+        "config"
+      ]
+    },
+    {
+      "label": "LICENSE",
+      "commands": [
+        "activate",
+        "deactivate",
+        "license"
+      ]
+    }
+  ],
+  "command_options": {
+    "classify": [
+      "--sensitivity-rules PATH",
+      "-o, --output PATH"
+    ],
+    "cleanup": [
+      "--execute",
+      "--jobs-dir PATH",
+      "--no-dedup",
+      "--no-validate",
+      "--reviewed",
+      "-o, --output-dir PATH"
+    ],
+    "config": [
+      "--key KEY",
+      "--provider NAME",
+      "--show",
+      "key",
+      "value"
+    ],
+    "configure": [
+      "--key KEY",
+      "--provider NAME",
+      "--show"
+    ],
+    "dedup": [
+      "--execute",
+      "--jobs-dir PATH",
+      "--strategy STRATEGY"
+    ],
+    "embed": [
+      "--jobs-dir PATH"
+    ],
+    "enrich": [
+      "--cloud-refine",
+      "--embed-only",
+      "--execute",
+      "--jobs-dir PATH",
+      "--sensitivity-rules PATH",
+      "-y, --yes"
+    ],
+    "execute": [
+      "--jobs-dir PATH",
+      "--reviewed"
+    ],
+    "export": [
+      "--batch",
+      "--format FORMAT",
+      "-o, --output PATH"
+    ],
+    "hash": [
+      "--algorithm ALGO",
+      "--json"
+    ],
+    "organize": [
+      "--execute",
+      "--jobs-dir PATH",
+      "--reviewed",
+      "--schema PATH",
+      "--sensitivity-rules PATH"
+    ],
+    "plan": [
+      "--schema PATH",
+      "--sensitivity-rules PATH",
+      "-o, --output-dir PATH"
+    ],
+    "process": [
+      "--execute",
+      "--jobs-dir PATH",
+      "--no-enrich",
+      "--no-rename",
+      "--reviewed",
+      "--schema PATH",
+      "--sensitivity-rules PATH",
+      "-o, --output-dir PATH"
+    ],
+    "rename": [
+      "--dirs",
+      "--execute",
+      "--from PATH",
+      "--prefix",
+      "--skip PATTERNS",
+      "--template",
+      "-o, --output PATH"
+    ],
+    "scan": [
+      "--include-cloud",
+      "--no-classify",
+      "--sensitivity-rules PATH",
+      "-o, --output PATH"
+    ],
+    "search": [
+      "--ai",
+      "--category CAT",
+      "--limit N",
+      "--reindex",
+      "--semantic",
+      "--sensitivity N",
+      "--similar FILE",
+      "--threshold F"
+    ],
+    "similar": [
+      "--limit N",
+      "--threshold F"
+    ],
+    "undo": [
+      "--execute",
+      "--force",
+      "--job UUID",
+      "--last N",
+      "--op UUID"
+    ],
+    "validate": [
+      "--check CHECK"
+    ],
+    "vault": [
+      "--backend",
+      "--dest PATH",
+      "--encryption",
+      "--filesystem",
+      "--hash",
+      "--keyfile",
+      "--pim",
+      "--size",
+      "--vault PATH"
+    ]
+  },
+  "free_commands": [
+    "activate",
+    "classify",
+    "config",
+    "configure",
+    "deactivate",
+    "hash",
+    "license",
+    "rename",
+    "scan",
+    "search",
+    "similar",
+    "status",
+    "tui",
+    "undo",
+    "validate"
+  ],
+  "licensed_commands": [
+    "cleanup",
+    "dedup",
+    "embed",
+    "enrich",
+    "execute",
+    "export",
+    "organize",
+    "plan",
+    "process",
+    "vault"
+  ],
+  "db_tables": [
+    "duplicates",
+    "embeddings",
+    "files",
+    "jobs",
+    "operations",
+    "paths",
+    "review_queue",
+    "schema_meta",
+    "search_index",
+    "search_index_config",
+    "search_index_content",
+    "search_index_data",
+    "search_index_docsize",
+    "search_index_idx",
+    "vault_entries"
+  ],
+  "xattr_keys": [
+    "hash",
+    "hash_sha256",
+    "sensitivity",
+    "category",
+    "entity",
+    "tags",
+    "date",
+    "descriptor",
+    "reviewed",
+    "original_name",
+    "original_path",
+    "job_uuid",
+    "enriched_at",
+    "exclude"
+  ]
+}

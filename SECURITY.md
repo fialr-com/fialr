@@ -33,3 +33,9 @@ Out of scope:
 - Issues requiring physical access to the machine
 - Social engineering
 - The documentation website
+
+## Threat model
+
+The full security model -- assets, trust boundaries, per-component threats and
+mitigations, and secrets-rotation procedures -- is documented at the
+[Security](https://fialr-com.github.io/fialr/security/) page of the docs.

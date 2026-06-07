@@ -1,0 +1,10 @@
+title = "fialr-public gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Docs use placeholder license keys (FIALR-XXXX-...) and example values."
+regexes = [
+  '''FIALR-[A-Z0-9X]{4}-[A-Z0-9X]{4}-[A-Z0-9X]{4}-[A-Z0-9X]{4}''',
+]
