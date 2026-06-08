@@ -61,15 +61,15 @@ Utility operations.
 |---------|-------------|
 | `hash` | Compute the BLAKE3 (or specified) hash of a file. |
 | `export` | Export sidecar metadata for files in JSON, YAML, Markdown, or CSV. |
-| `vault` | Create, mount, and manage an encrypted vault (VeraCrypt, APFS, or age). |
+| `vault` | Create, mount, and manage an encrypted vault (APFS or age). |
 | `validate` | Verify corpus integrity against recorded hashes and manifests. |
 | `undo` | Roll back prior move, rename, or archive operations. |
 | `dedup` | Detect exact and near-duplicate files and stage non-canonical copies. |
 
 `hash` accepts `--algorithm ALGO` and `--json`. `export` accepts `--format FORMAT`,
-`--batch`, and `-o, --output PATH`. `vault` accepts `--backend`, `--encryption`,
-`--filesystem`, `--vault PATH`, `--dest PATH`, `--keyfile`, `--pim`, `--size`, and
-`--hash`. `validate` accepts `--check CHECK`. `undo` accepts `--last N`, `--job UUID`,
+`--batch`, and `-o, --output PATH`. `vault` accepts `--backend`, `--vault PATH`,
+`--dest PATH`, `--size`, and `--execute`. `validate` accepts `--check CHECK`. `undo`
+accepts `--last N`, `--job UUID`,
 `--op UUID`, `--execute`, and `--force`. `dedup` accepts `--strategy STRATEGY`,
 `--jobs-dir PATH`, and `--execute`.
 

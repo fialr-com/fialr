@@ -112,6 +112,7 @@
       "--jobs-dir PATH"
     ],
     "enrich": [
+      "--allow-tier1",
       "--cloud-refine",
       "--embed-only",
       "--execute",
@@ -196,11 +197,7 @@
     "vault": [
       "--backend",
       "--dest PATH",
-      "--encryption",
-      "--filesystem",
-      "--hash",
-      "--keyfile",
-      "--pim",
+      "--execute",
       "--size",
       "--vault PATH"
     ]

@@ -84,10 +84,8 @@ diagram of the local data flow.
 
 ### Vault and local credentials
 
-- Vault passwords are passed only via stdin, never as CLI arguments, and are never
-  written to disk or the ledger.
-- Keyfiles use `secrets`-based randomness and `0600` permissions; YubiKey
-  challenge-response is supported.
+- Vault passwords are delivered to the backend via stdin (APFS) or a pseudo-terminal
+  (age), never as CLI arguments, and are never written to disk or the ledger.
 - On rehydrate, the restored file's BLAKE3 is recomputed and compared; a mismatch
   unlinks the output and records the failure.
 - `license.json` is written `0600` in a `0700` directory; activation uses

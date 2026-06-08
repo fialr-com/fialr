@@ -40,7 +40,7 @@ map below summarizes the structure documented in the project's internal architec
 | `core/organize` | Schema-driven reorganization. |
 | `core/validate` | Integrity verification against manifests. |
 | `core/undo` | Rollback of moves, renames, and archives. |
-| `core/vault` | Encrypted vault (VeraCrypt, APFS, age). |
+| `core/vault` | Encrypted vault (APFS, age). |
 | `core/embeddings` | Vector embeddings, cosine similarity, semantic search. |
 | `core/search` | Full-text (FTS5) search plus AI query expansion and semantic search. |
 | `core/license` | License activation and feature gating. |
@@ -177,7 +177,7 @@ flowchart TB
         CLI["fialr CLI"]
         CLASS["classifier<br/>structural + opt-in content scan"]
         DB[("SQLite ledger<br/>append-only operations")]
-        VAULT[("Encrypted vault<br/>VeraCrypt / APFS / age")]
+        VAULT[("Encrypted vault<br/>APFS / age")]
         SAN["sanitize_for_cloud<br/>strips SSN / CC / EIN / acct"]
     end
 
